@@ -1,18 +1,16 @@
-import aboutContent from "./contents/about";
-import contactContent from "./contents/contact";
-import homeContent from "./contents/home";
-import menuContent from "./contents/menu";
-import "./style.css";
+import "./css/reset.css";
+import "./css/main.css";
 
-const content = document.querySelector("#content");
+import renderContent from "./contents/renderContent";
+import homeContent from "./contents/home/home";
+import menuContent from "./contents/menu";
+import contactContent from "./contents/contact";
+import aboutContent from "./contents/about";
+
 const homeButton = document.querySelector('button[data-page="home"]');
 const menuButton = document.querySelector('button[data-page="menu"]');
 const contactButton = document.querySelector('button[data-page="contact"]');
 const aboutButton = document.querySelector('button[data-page="about"]');
-
-function renderContent(page) {
-	content.replaceChildren(page);
-}
 
 renderContent(homeContent);
 

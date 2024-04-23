@@ -1,0 +1,73 @@
+@import url("https://fonts.cdnfonts.com/css/amagro");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+:root {
+	--color-text: #0d0d0a;
+	--color-background: #fffff3;
+	--color-primary: #c54c43;
+	--color-secondary: #bac4af;
+	--color-accent: #a1b398;
+
+	--font-logo: "Amagro", serif;
+	--font-heading: "Cormorant", serif;
+	--font-base: "Nunito Sans", sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+body {
+	font-family: var(--font-base);
+	background-color: var(--color-background);
+	margin: 0;
+}
+
+button,
+a {
+	background-color: inherit;
+	color: inherit;
+	border: 0;
+	cursor: pointer;
+	font-size: inherit;
+	text-decoration: none;
+}
+
+.wrapper {
+	width: min(1100px, calc(100% - 4rem));
+	margin-inline: auto;
+}
+
+header {
+	position: sticky;
+	top: 0;
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-block: 1rem;
+	}
+
+	.logo svg {
+		height: 3rem;
+		width: fit-content;
+
+		& path {
+			fill: var(--color-primary);
+		}
+	}
+
+	& ul {
+		list-style: none;
+		display: flex;
+		gap: 2.5rem;
+		font-size: 1.25rem;
+	}
+}
+
+#content {
+	padding-block: 2rem;
+}
