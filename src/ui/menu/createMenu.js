@@ -4,7 +4,7 @@ export default (menu) => {
 
 	const menuImage = new Image();
 	menuImage.src = menu.imgSrc;
-	menuImage.alt = menu.item;
+	menuImage.alt = menu.name;
 
 	const imgWrapper = document.createElement("div");
 	imgWrapper.classList.add("image-wrapper");

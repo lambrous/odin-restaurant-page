@@ -71,3 +71,13 @@ header {
 #content {
 	padding-block: 2rem;
 }
+
+.opaque {
+	background-color: color-mix(
+		in oklab,
+		var(--color-background),
+		transparent 5%
+	);
+	border-bottom: 1px solid;
+	border-color: color-mix(in oklab, var(--color-secondary), transparent 5%);
+}
