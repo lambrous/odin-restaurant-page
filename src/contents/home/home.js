@@ -1,7 +1,7 @@
 import "./home.css";
 import restaurantImgSrc from "../../images/restaurant.jpg";
 import renderContent from "../renderContent";
-import menuContent from "../menu";
+import menuContent from "../menu/menu";
 
 const homeContent = document.createElement("div");
 homeContent.id = "home";

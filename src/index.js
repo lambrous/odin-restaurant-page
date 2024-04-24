@@ -3,7 +3,7 @@ import "./css/main.css";
 
 import renderContent from "./contents/renderContent";
 import homeContent from "./contents/home/home";
-import menuContent from "./contents/menu";
+import menuContent from "./contents/menu/menu";
 import contactContent from "./contents/contact";
 import aboutContent from "./contents/about";
 
