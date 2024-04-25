@@ -1,7 +1,5 @@
 import "./home.css";
 import restaurantImgSrc from "../../images/restaurant.jpg";
-import renderContent from "../renderContent";
-import menuContent from "../menu/menu";
 
 const homeContent = document.createElement("div");
 homeContent.id = "home";
@@ -11,7 +9,9 @@ heading.textContent = "The Odin Restaurant";
 
 const menuButton = document.createElement("button");
 menuButton.textContent = "View Menu";
-menuButton.addEventListener("click", () => renderContent(menuContent));
+menuButton.addEventListener("click", () =>
+	document.querySelector('button[data-page="menu"]').click(),
+);
 
 const restaurantImage = new Image();
 restaurantImage.src = restaurantImgSrc;

@@ -66,6 +66,25 @@ header {
 		gap: 2.5rem;
 		font-size: 1.25rem;
 	}
+
+	& button {
+		text-decoration: underline;
+		text-decoration-thickness: 0.25rem;
+		text-underline-offset: 0.5rem;
+		text-decoration-color: transparent;
+	}
+
+	& button.active-tab {
+		text-decoration-color: var(--color-accent);
+	}
+
+	& button:not(.active-tab):hover {
+		text-decoration-color: color-mix(
+			in oklab,
+			var(--color-accent),
+			transparent
+		);
+	}
 }
 
 #content {

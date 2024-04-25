@@ -1,22 +1,17 @@
 import "./css/reset.css";
 import "./css/main.css";
 
-import renderContent from "./ui/renderContent";
-import homeContent from "./ui/home/home";
-import menuContent from "./ui/menu/menu";
-import contactContent from "./ui/contact";
-import aboutContent from "./ui/about";
 import navbarOnScroll from "./ui/navbarOnScroll";
+import tabs from "./ui/tabs";
+import homeContent from "./ui/home/home";
+import { changeContent } from "./ui/content";
+import { setActiveTab } from "./ui/activeTab";
 
-const homeButton = document.querySelector('button[data-page="home"]');
-const menuButton = document.querySelector('button[data-page="menu"]');
-const contactButton = document.querySelector('button[data-page="contact"]');
-const aboutButton = document.querySelector('button[data-page="about"]');
-
-renderContent(homeContent);
-
-homeButton.addEventListener("click", () => renderContent(homeContent));
-menuButton.addEventListener("click", () => renderContent(menuContent));
-contactButton.addEventListener("click", () => renderContent(contactContent));
-aboutButton.addEventListener("click", () => renderContent(aboutContent));
+changeContent(homeContent);
 window.addEventListener("scroll", navbarOnScroll, { passive: true });
+
+for (const tab of tabs) {
+	tab.element.addEventListener("click", () => {
+		changeContent(tab.content, setActiveTab);
+	});
+}
