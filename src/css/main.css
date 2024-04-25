@@ -35,6 +35,14 @@ a {
 	text-decoration: none;
 }
 
+h1,
+h2,
+h3 {
+	font-family: var(--font-heading);
+	color: var(--color-primary);
+	font-weight: 600;
+}
+
 .wrapper {
 	width: min(1100px, calc(100% - 4rem));
 	margin-inline: auto;
@@ -88,7 +96,7 @@ header {
 }
 
 #content {
-	padding-block: 2rem;
+	padding-block: 3rem;
 }
 
 .opaque {
