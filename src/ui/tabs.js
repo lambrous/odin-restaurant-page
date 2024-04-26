@@ -1,5 +1,5 @@
 import aboutContent from "./about/about";
-import contactContent from "./contact";
+import contactContent from "./contact/contact";
 import homeContent from "./home/home";
 import menuContent from "./menu/menu";
 
